@@ -13,7 +13,7 @@ include("init.php");
     <link rel="stylesheet" href="<?php echo $css;?>navstyle.css">
     <link href="https://cdn.jsdelivr.net/npm/tom-select@2.0.0/dist/css/tom-select.css" rel="stylesheet">
     <link href="<?php echo $css;?>style.css" rel="stylesheet">
-    <title>لوحة تحكم محطة تركي العامر</title>
+    <title>لوحة تحكم شركة كويك</title>
     <script src="<?php echo $js;?>bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@panzoom/panzoom/dist/panzoom.min.js"></script>
