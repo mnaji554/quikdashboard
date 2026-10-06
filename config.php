@@ -1,9 +1,9 @@
 <?php
  // 1- connect to db
 $host="localhost";
-$user="root";
-$password="";
-$database="company";
+$user="u843396249_company";
+$password="Almzah13";
+$database="u843396249_company";
 $conn=  mysqli_connect($host, $user, $password, $database);
 mysqli_query($conn, "SET NAMES 'utf8'");
 mysqli_query($conn, "SET CHARACTER SET 'utf8'");
