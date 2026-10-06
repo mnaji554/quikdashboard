@@ -1,0 +1,423 @@
+.container {
+  margin-top: 20px;
+  margin-right: 18%;
+}
+
+
+body{
+  font-family: "cairo", sans-serif;
+  background-color: #f8f9fa;
+}
+.card{
+  font-family: "cairo", sans-serif;
+  text-decoration: none !important;
+}
+
+
+.card-img, .card-img-bottom, .card-img-top {
+  width: 98%;
+}
+
+.title {
+  text-align: center;
+  display: block;
+  width: 100%;
+}
+
+.dataTables_wrapper .dataTables_paginate {
+  float: none;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+:after {
+  content: "";
+}
+
+section {
+  position: relative;
+  left: 100px;
+}
+
+.div-body {
+  background: rgba(255, 255, 255, 0.4);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  transition: all 0.4s ease-out;
+  height: 150px;
+  margin: 50px;
+  margin-top: 0%;
+  padding: 20px;
+  width: 250px;
+}
+
+.leftside {
+  float: left;
+}
+
+tr {
+  font-weight: bold;
+  color: #000;
+}
+
+.info-body {
+  background: rgba(255, 255, 255, 0.4);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  transition: all 0.4s ease-out;
+  margin: 50px;
+  margin-top: 2%;
+  padding: 20px;
+  width: 250px;
+}
+.empcol{
+ margin:10px;
+}
+
+.line-body {
+  background: rgba(255, 255, 255, 0.4);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  transition: all 0.4s ease-out;
+  padding: 10px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+.line-body1 {
+  /* background: rgba(255, 255, 255, 0.4);
+  /* box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37); */
+  /* backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  transition: all 0.4s ease-out;  */
+  /* padding: 10px; */
+  font-weight: bold;
+}
+
+.div-body:hover {
+  scale: 1.1;
+}
+
+.card-body {
+  background: rgba(255, 255, 255, 0.4);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  margin: auto;
+  margin-top: 2%;
+  padding: 8px;
+  width: 30rem;
+  flex: none;
+}
+
+.txt {
+  bottom: 80px;
+  font-size: 30px;
+  position: relative;
+  margin: auto;
+  text-align: left;
+}
+
+.upinput {
+  background: rgba(255, 255, 255, 0.4);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  width: 65%;
+  display: inline;
+  margin-right: 10px;
+}
+.eminput{
+  margin-bottom: 10px;
+}
+
+h1 {
+  margin: 80px 0 10px 0;
+  font-size: 52px;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+.card-title {
+  font-size: 22px;
+}
+
+label {
+  margin: auto;
+}
+
+.brand {
+  text-align: center;
+}
+
+.inputs {
+  direction: rtl;
+}
+
+.errors {
+  position: absolute;
+  margin-top: 40%;
+  margin-left: 39%;
+  height: 10px;
+  width: max-content;
+}
+
+.mtable {
+  width: 80%;
+  margin: auto;
+  padding: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  background-color: white;
+  color: black;
+}
+
+.alerts {
+  margin: auto;
+  margin-top: 5%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  background-color: white;
+  padding: 10px;
+}
+
+textarea {
+  width: -webkit-fill-available;
+  overflow: auto;
+  outline: none;
+  direction: rtl;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  resize: none;
+}
+
+.send {
+  border: none;
+  display: block;
+  display: block;
+  position: relative;
+  width: 200px;
+  height: 50px;
+  border-radius: 25px;
+  background: linear-gradient(40deg, #ee7b38, #ffb72d);
+  box-shadow: 0 4px 7px rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform .2s ease-out;
+}
+
+.choosefile {
+  text-align: -webkit-center;
+}
+
+.notes {
+  text-align: center;
+  font-weight: bold;
+}
+
+/* file input decoration */
+.file {
+  opacity: 0;
+  width: 0.1px;
+  height: 0.1px;
+  position: absolute;
+}
+
+.file-input label {
+  display: block;
+  position: relative;
+  width: 200px;
+  height: 50px;
+  border-radius: 25px;
+  background: linear-gradient(40deg, #ee7b38, #ffb72d);
+  box-shadow: 0 4px 7px rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform .2s ease-out;
+}
+
+.file-name {
+  position: absolute;
+  bottom: -35px;
+  left: 10px;
+  font-size: 0.85rem;
+  color: #555;
+}
+
+input:hover+label,
+input:focus+label {
+  transform: scale(1.02);
+}
+
+.send:hover {
+  transform: scale(1.02);
+}
+
+/* Adding an outline to the label on focus */
+input:focus+label {
+  outline: 1px solid #000;
+  outline: -webkit-focus-ring-color auto 2px;
+}
+
+/* end file input decoration */
+.dataTables_wrapper .dataTables_paginate {
+  float: none;
+}
+td{
+  color: #000;
+  font-family: "cairo", sans-serif;
+}
+label {
+  margin: auto;
+}
+
+.brand {
+  text-align: center;
+}
+
+.inputs {
+  direction: rtl;
+}
+
+.errors {
+  position: absolute;
+  margin-top: 40%;
+  margin-left: 39%;
+  height: 10px;
+  width: max-content;
+}
+
+.mtable {
+  width: 100%;
+  margin: auto;
+  padding: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  background-color: white;
+}
+
+.alerts {
+  margin: auto;
+  margin-top: 5%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  background-color: white;
+  padding: 10px;
+}
+
+textarea {
+  width: -webkit-fill-available;
+  overflow: auto;
+  outline: none;
+  direction: rtl;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  resize: none;
+}
+
+.send {
+  border: none;
+  display: block;
+  display: block;
+  position: relative;
+  width: 200px;
+  height: 50px;
+  border-radius: 25px;
+  background: linear-gradient(40deg, #ee7b38, #ffb72d);
+  box-shadow: 0 4px 7px rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform .2s ease-out;
+}
+
+.choosefile {
+  text-align: -webkit-center;
+}
+
+.notes {
+  text-align: center;
+  font-weight: bold;
+}
+
+/* file input decoration */
+.file {
+  opacity: 0;
+  width: 0.1px;
+  height: 0.1px;
+  position: absolute;
+}
+
+.file-input label {
+  display: block;
+  position: relative;
+  width: 200px;
+  height: 50px;
+  border-radius: 25px;
+  background: linear-gradient(40deg, #ee7b38, #ffb72d);
+  box-shadow: 0 4px 7px rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform .2s ease-out;
+}
+
+.file-name {
+  position: absolute;
+  bottom: -35px;
+  left: 10px;
+  font-size: 0.85rem;
+  color: #555;
+}
+
+input:hover+label,
+input:focus+label {
+  transform: scale(1.02);
+}
+
+.send:hover {
+  transform: scale(1.02);
+}
+
+/* Adding an outline to the label on focus */
+input:focus+label {
+  outline: 1px solid #000;
+  outline: -webkit-focus-ring-color auto 2px;
+}
+
+/* end file input decoration */
