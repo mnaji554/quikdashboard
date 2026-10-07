@@ -5,7 +5,7 @@ include("../config.php");
 $id = $_GET['id'];
 $query = "SELECT holday.*, employee.id as employee_id, employee.name as employee_name 
           FROM holday 
-          INNER JOIN employee ON holday.id = employee.id
+          INNER JOIN employee ON employee.id = holday.id
           WHERE holday.id = $id";
 
 $result = mysqli_query($conn, $query);
