@@ -2,11 +2,8 @@
 include ("../config.php");
 
 // Modify the query to perform an INNER JOIN between employee and holday tables
-$query = "SELECT holday.*, employee.id as employee_id, employee.name as employee_name 
-          FROM holday 
-          INNER JOIN employee ON holday.id = employee.id
-          WHERE CURRENT_DATE BETWEEN holday.start_date AND holday.end_date
-          ORDER BY employee.name";
+$query = "SELECT * FROM holday 
+          INNER JOIN employee ON holday.id = employee.id;";
 
 $result = mysqli_query($conn, $query);
 if (! $result) {
