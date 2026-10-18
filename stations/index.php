@@ -70,10 +70,19 @@ while ($row = mysqli_fetch_assoc($result)) {
 <script>
     const stations = <?php echo json_encode($stations, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES); ?>;
 
+    const saBounds = L.latLngBounds([
+        [15.0, 34.0],
+        [33.0, 56.5]
+    ]);
+
     const map = L.map('stationsMap', {
         zoomControl: true,
-        scrollWheelZoom: true
-    }).setView([24.5, 45], 5);
+        scrollWheelZoom: true,
+        minZoom: 5,
+        maxZoom: 9,
+        maxBounds: saBounds,
+        maxBoundsViscosity: 1.0
+    }).fitBounds(saBounds);
 
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '&copy; OpenStreetMap contributors'
@@ -95,7 +104,9 @@ while ($row = mysqli_fetch_assoc($result)) {
             return [station.lat, station.lng];
         }));
 
-        map.fitBounds(bounds.pad(0.25));
+        if (bounds.isValid()) {
+            map.fitBounds(bounds.pad(0.25));
+        }
     }
 </script>
 </div>
