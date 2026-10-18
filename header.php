@@ -42,7 +42,7 @@ include("init.php");
       <div class="nav-button" id="file-management-button"><span>ادارة الملفات</span><i class="fas fa-file"></i></div>
       <div class="nav-button" id="residency-button"><span>الاقامات</span><i class="fas fa-id-card"></i></div>
       <div class="nav-button" id="insurance-button"><span>التامينات</span><i class="fas fa-id-card"></i></div>
-      <div class="nav-button" id="vacation-calculator-button"><span>حاسبة الاجازات</span><i class="fas fa-umbrella-beach"></i></div>
+      <div class="nav-button" id="vacation-calculator-button"><span> المحطات</span><i class="fas fa-umbrella-beach"></i></div>
       <div class="nav-button" id="archive-sequence-button"><span>تسلسل الارشيف</span><i class="fas fa-archive"></i></div>
       <hr />
       <div class="nav-button" id="maintenance-button"><span>الصيانة</span><i class="fas fa-tools"></i></div>
