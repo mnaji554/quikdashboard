@@ -95,7 +95,7 @@ include("init.php");
             window.location.href = '/company/insurance/insurance.php';
             });
             $('#vacation-calculator-button').on('click', function() {
-            window.location.href = '/company/holday/hcounter.php';
+            window.location.href = '/company/stations/index.php';
             });
             $('#archive-sequence-button').on('click', function() {
             window.location.href = '/company/archive/archive.php';
