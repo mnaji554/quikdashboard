@@ -7,18 +7,20 @@ $result = mysqli_query($conn, $query);
 $stations = [];
 
 while ($row = mysqli_fetch_assoc($result)) {
-    $lat = (float) $row['Lat'];
-    $lng = (float) $row['Lng'];
+    // The database values appear to be stored as [Lng, Lat] but Leaflet expects [Lat, Lng].
+    $storedLat = (float) $row['Lat'];
+    $storedLng = (float) $row['Lng'];
 
-    if ($lat == 0 && $lng == 0) {
+    if ($storedLat == 0 && $storedLng == 0) {
         continue;
     }
 
+    // Swap them for correct map rendering.
     $stations[] = [
         'id' => (int) $row['id'],
         'name' => $row['stationName'],
-        'lat' => $lat,
-        'lng' => $lng,
+        'lat' => $storedLng,
+        'lng' => $storedLat,
     ];
 }
 ?>
