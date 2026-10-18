@@ -70,6 +70,11 @@ while ($row = mysqli_fetch_assoc($result)) {
 <script>
     const stations = <?php echo json_encode($stations, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES); ?>;
 
+    const toLeafletPoint = function(lat, lng) {
+        return [Number(lat), Number(lng)];
+    };
+
+    // In Leaflet, coordinates are always [lat, lng], not [lng, lat].
     const saBounds = L.latLngBounds([
         [15.0, 34.0],
         [33.0, 56.5]
@@ -90,7 +95,8 @@ while ($row = mysqli_fetch_assoc($result)) {
 
     if (stations.length > 0) {
         stations.forEach(function(station) {
-            const marker = L.marker([station.lat, station.lng]).addTo(map);
+            const point = toLeafletPoint(station.lat, station.lng);
+            const marker = L.marker(point).addTo(map);
             marker.bindPopup(
                 '<div style="min-width: 180px;">' +
                 '<strong>' + station.name + '</strong><br>' +
@@ -101,7 +107,7 @@ while ($row = mysqli_fetch_assoc($result)) {
         });
 
         const bounds = L.latLngBounds(stations.map(function(station) {
-            return [station.lat, station.lng];
+            return toLeafletPoint(station.lat, station.lng);
         }));
 
         if (bounds.isValid()) {
