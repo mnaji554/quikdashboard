@@ -67,7 +67,7 @@ while ($row = mysqli_fetch_assoc($result)) {
                 </div>
                 <div class="card-body p-0">
                     <div class="table-responsive stations-table-scroll">
-                        <table class="table table-striped table-bordered align-middle mb-0" style="width: 40rem;">
+                        <table class="table table-striped table-bordered align-middle mb-0" style="width: 32rem;">
                             <thead class="table-light">
                                 <tr>
                                     <th>#</th>
