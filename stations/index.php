@@ -100,7 +100,7 @@ while ($row = mysqli_fetch_assoc($result)) {
             const point = toLeafletPoint(station.lat, station.lng);
             const marker = L.marker(point).addTo(map);
             marker.bindPopup(
-                '<div style="min-width: 180px;">' +
+                '<div style="min-width: 100px;">' +
                 '<strong>' + station.name + '</strong><br>' +
                 'Lat: ' + station.lat + '<br>' +
                 'Lng: ' + station.lng +
