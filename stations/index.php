@@ -19,8 +19,8 @@ while ($row = mysqli_fetch_assoc($result)) {
     $stations[] = [
         'id' => (int) $row['id'],
         'name' => $row['stationName'],
-        'lat' => $storedLng,
-        'lng' => $storedLat,
+        'lat' => $storedLat,
+        'lng' => $storedLng,
     ];
 }
 ?>
