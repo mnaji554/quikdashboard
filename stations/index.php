@@ -25,42 +25,70 @@ while ($row = mysqli_fetch_assoc($result)) {
 }
 ?>
 
-<div class="container-fluid mt-4 mb-4">
-    <div class="card shadow-sm border-0" style="border-radius: 12px; overflow: hidden;">
-        <div class="card-header bg-white border-0 py-3">
-            <h4 class="mb-0 text-dark">خريطة المحطات في المملكة العربية السعودية</h4>
-        </div>
-        <div class="card-body p-0">
-            <div id="stationsMap" style="height: 620px; width: 100%;"></div>
-        </div>
-    </div>
+<style>
+    .stations-map {
+        height: max(700px, 78vh);
+        width: 100%;
+    }
 
-    <div class="card shadow-sm border-0 mt-4" style="border-radius: 12px;">
-        <div class="card-header bg-white border-0 py-3">
-            <h5 class="mb-0 text-dark">جدول المحطات</h5>
+    .stations-table-scroll {
+        max-height: max(700px, 78vh);
+        overflow: auto;
+    }
+
+    @media (max-width: 991.98px) {
+        .stations-map {
+            height: 65vh;
+            min-height: 480px;
+        }
+
+        .stations-table-scroll {
+            max-height: 480px;
+        }
+    }
+</style>
+
+<div class="container-fluid mt-4 mb-4">
+    <div class="mb-3">
+        <h4 class="mb-0 text-dark">خريطة المحطات في المملكة العربية السعودية</h4>
+    </div>
+    <div class="row g-3 align-items-stretch">
+        <div class="col-12 col-lg-8">
+            <div class="card shadow-sm border-0 h-100" style="border-radius: 12px; overflow: hidden;">
+                <div class="card-body p-0">
+                    <div id="stationsMap" class="stations-map"></div>
+                </div>
+            </div>
         </div>
-        <div class="card-body">
-            <div class="table-responsive">
-                <table class="table table-striped table-bordered align-middle mb-0">
-                    <thead>
-                        <tr>
-                            <th>#</th>
-                            <th>اسم المحطة</th>
-                            <th>خط الطول</th>
-                            <th>خط العرض</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <?php foreach ($stations as $index => $station): ?>
-                            <tr>
-                                <td><?php echo $index + 1; ?></td>
-                                <td><?php echo htmlspecialchars($station['name'], ENT_QUOTES, 'UTF-8'); ?></td>
-                                <td><?php echo number_format((float) $station['lng'], 7, '.', ''); ?></td>
-                                <td><?php echo number_format((float) $station['lat'], 7, '.', ''); ?></td>
-                            </tr>
-                        <?php endforeach; ?>
-                    </tbody>
-                </table>
+        <div class="col-12 col-lg-4">
+            <div class="card shadow-sm border-0 h-100" style="border-radius: 12px; overflow: hidden;">
+                <div class="card-header bg-white border-0 py-3">
+                    <h5 class="mb-0 text-dark">جدول المحطات</h5>
+                </div>
+                <div class="card-body p-0">
+                    <div class="table-responsive stations-table-scroll">
+                        <table class="table table-striped table-bordered align-middle mb-0">
+                            <thead class="table-light">
+                                <tr>
+                                    <th>#</th>
+                                    <th>اسم المحطة</th>
+                                    <th>خط الطول</th>
+                                    <th>خط العرض</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php foreach ($stations as $index => $station): ?>
+                                    <tr>
+                                        <td><?php echo $index + 1; ?></td>
+                                        <td><?php echo htmlspecialchars($station['name'], ENT_QUOTES, 'UTF-8'); ?></td>
+                                        <td><?php echo number_format((float) $station['lng'], 7, '.', ''); ?></td>
+                                        <td><?php echo number_format((float) $station['lat'], 7, '.', ''); ?></td>
+                                    </tr>
+                                <?php endforeach; ?>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
