@@ -55,8 +55,8 @@ while ($row = mysqli_fetch_assoc($result)) {
                             <tr>
                                 <td><?php echo $index + 1; ?></td>
                                 <td><?php echo htmlspecialchars($station['name'], ENT_QUOTES, 'UTF-8'); ?></td>
-                                <td><?php echo number_format((float) $station['lng'], 6, '.', ''); ?></td>
-                                <td><?php echo number_format((float) $station['lat'], 6, '.', ''); ?></td>
+                                <td><?php echo number_format((float) $station['lng'], 7, '.', ''); ?></td>
+                                <td><?php echo number_format((float) $station['lat'], 7, '.', ''); ?></td>
                             </tr>
                         <?php endforeach; ?>
                     </tbody>
