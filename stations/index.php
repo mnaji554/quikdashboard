@@ -2,7 +2,7 @@
 include '../config.php';
 include '../header.php';
 
-$query = "SELECT id, stationName, Lng, Lat FROM stations WHERE Lng IS NOT NULL AND Lat IS NOT NULL AND Lng != '' AND Lat != '' ORDER BY stationName";
+$query = "SELECT id, stationName, Lng, Lat FROM stations WHERE Lng IS NOT NULL AND Lat IS NOT NULL AND Lng != '' AND Lat != '' ORDER BY id";
 $result = mysqli_query($conn, $query);
 $stations = [];
 
